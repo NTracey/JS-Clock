@@ -6,6 +6,11 @@ function setDate() {
   const now = new Date();
   const seconds = now.getSeconds();
 
+  /*
+   * Convert time value to fraction
+   * Then convert the fraction to degrees to represent the rotation angle on the clock face.
+   * Add 90 degrees to shift the starting position of the clock hand from 3 o'clock to 12 o'clock.
+   */
   const secondsDegrees = (seconds / 60) * 360 + 90;
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
